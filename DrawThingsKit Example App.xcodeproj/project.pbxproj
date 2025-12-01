@@ -655,7 +655,7 @@
 			repositoryURL = "https://github.com/euphoriacyberware-ai/DrawThingsKit";
 			requirement = {
 				kind = exactVersion;
-				version = 2.0.0;
+				version = 2.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

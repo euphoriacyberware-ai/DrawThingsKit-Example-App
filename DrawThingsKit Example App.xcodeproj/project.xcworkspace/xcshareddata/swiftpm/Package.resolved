@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/euphoriacyberware-ai/DrawThingsKit",
       "state" : {
-        "revision" : "74eab7d9d0ebdefde396144cd1452755dd167928",
-        "version" : "2.0.0"
+        "revision" : "e9de7aef7dd5b25ac6533d01ae7003e720898da5",
+        "version" : "2.0.1"
       }
     },
     {
