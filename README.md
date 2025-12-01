@@ -15,7 +15,7 @@ This app showcases the key components of DrawThingsKit in a functional implement
 
 ## Requirements
 
-- macOS 13.0+ / iOS 16.0+
+- macOS 14.0+ (Sonoma) / iOS 17.0+
 - Xcode 15.0+
 - A running [Draw Things](https://drawthings.ai) instance with API Server enabled
 
