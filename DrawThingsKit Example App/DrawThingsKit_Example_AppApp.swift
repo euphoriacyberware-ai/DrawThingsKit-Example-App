@@ -2,7 +2,7 @@
 //  DrawThingsKit_Example_AppApp.swift
 //  DrawThingsKit Example App
 //
-//  Created by Brian Cantin on 2025-11-30.
+//  Created by euphoriacyberware-ai on 2025-11-30.
 //
 
 import SwiftUI
