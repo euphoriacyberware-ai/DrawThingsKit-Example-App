@@ -7,26 +7,26 @@
 
 import SwiftUI
 import SwiftData
+import DrawThingsKit
 
 @main
 struct DrawThingsKit_Example_AppApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    @StateObject private var connectionManager = ConnectionManager()
+    @StateObject private var configurationManager = ConfigurationManager()
+    @StateObject private var queue = JobQueue()
+    @StateObject private var processor = QueueProcessor()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(connectionManager)
+                .environmentObject(configurationManager)
+                .environmentObject(queue)
+                .environmentObject(processor)
+                .task {
+                    processor.startProcessing(queue: queue, connectionManager: connectionManager)
+                }
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(for: SavedConfiguration.self)
     }
 }
