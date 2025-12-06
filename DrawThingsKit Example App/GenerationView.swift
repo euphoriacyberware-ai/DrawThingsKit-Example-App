@@ -74,16 +74,14 @@ struct GenerationView: View {
                         refinerStart: $configurationManager.activeConfiguration.refinerStart,
                         sampler: $configurationManager.activeConfiguration.sampler,
                         modelName: $configurationManager.activeConfiguration.model,
-                        refinerName: $configurationManager.activeConfiguration.refinerModel,
-                        mixtureOfExperts: $configurationManager.mixtureOfExperts
+                        refinerName: $configurationManager.activeConfiguration.refinerModel
                     )
                 }
 
                 GroupBox("LoRA") {
                     LoRASection(
                         modelsManager: modelsManager,
-                        selectedLoRAs: $configurationManager.selectedLoRAs,
-                        mixtureOfExperts: configurationManager.mixtureOfExperts
+                        selectedLoRAs: $configurationManager.selectedLoRAs
                     )
                 }
             }
